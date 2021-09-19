@@ -12,17 +12,25 @@ features <- function(df, target_col) {
   }
 }
 
-#' Returns target columna valies as an array.
+#' Returns target column values as array.
 #' @param df a data frame.
 #' @param target_col target column.
 #' @return target variable values.
 #' @export
 #' @importFrom dplyr select pull
-label <- function(df, target_col) {
+target_array <- function(df, target_col) {
   df %>% 
     dplyr::select(target_col) %>% 
     dplyr::pull()
 }
+
+#' Returns a data frame with the target column.
+#' @param df a data frame.
+#' @param target_col target column.
+#' @return target variable values.
+#' @export
+#' @importFrom dplyr select
+target <- function(df, target_col) df %>% dplyr::select(target_col)
 
 #' Add index as another regular data frame column
 #' @param df a data frame.
