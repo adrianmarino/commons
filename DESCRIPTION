@@ -1,0 +1,22 @@
+Package: commons
+Title: commons
+Version: 0.0.1
+Author: Adrian Norberto Marino <adrianmarino@gmail.com>
+Maintainer: Adrian Norberto Marino <adrianmarino@gmail.com>
+Description: Only another R commons lib.
+License: MIT
+URL: https://github.com/adrianmarino/commons
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.2
+Imports:
+  utils,
+  caret,
+  dplyr,
+  ggbiplot,
+  mdqc,
+  randomForest,
+  MLmetrics,
+  ROCit,
+  pROC,
+  cvms
