@@ -1,4 +1,4 @@
-# R commons Library
+# R Commons Library
 
 Common functions like metrics, feature importance, load csv, robust pca, etc...
 
