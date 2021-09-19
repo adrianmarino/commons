@@ -1,6 +1,6 @@
 # R commons Library
 
-Commons functions like metrics, feature importance, load csv, robust pca, etc...
+Common functions like metrics, feature importance, load csv, robust pca, etc...
 
 # Install Library
 
