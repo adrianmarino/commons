@@ -1,2 +1,2 @@
 # commons
-R common. library
+R commons library
