@@ -3,16 +3,15 @@
 #' @param target a target column
 #' @export
 #' @importFrom randomForest randomForest
-features_importance <- function(df, target) {
-  features <- df %>% 
-    dplyr::select_if(is.numeric)
-  
-  target <- df %>% 
-    dplyr::select(target) %>%
+features_importance <- function(df, target_column) {
+  feat <- features(df, target_column) %>%
+    mutate_if(is.character, as.factor)
+
+  tar  <- target(df, target_column) %>%
     mutate_if(is.character, as.factor) %>%
-    pull(target)
-  
-  randomForest(x = features, y = target, importance=TRUE)
+    pull(target_column)
+
+  randomForest(x = feat, y = tar, importance=TRUE)
 }
 
 #' Plot a fearures importance result.

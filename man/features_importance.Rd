@@ -4,7 +4,7 @@
 \alias{features_importance}
 \title{Get features importance from a dataframe for a give target column.}
 \usage{
-features_importance(df, target)
+features_importance(df, target_column)
 }
 \arguments{
 \item{df}{a dataframe}
