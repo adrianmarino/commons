@@ -37,7 +37,7 @@ target <- function(df, target_col) df %>% dplyr::select(target_col)
 #' @return a data frame.
 #' @export
 index_as_column <- function(df) {
-  df <- cbind(index = rownames(df), df)
+  df <- cbind(index_col = rownames(df), df)
   rownames(df) <- 1:nrow(df)
   df
 }

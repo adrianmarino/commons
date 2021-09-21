@@ -6,6 +6,11 @@
 \usage{
 tn(predictions, reality)
 }
+\arguments{
+\item{predictions}{model predictions}
+
+\item{reality}{real values}
+}
 \value{
 true negatives count.
 }

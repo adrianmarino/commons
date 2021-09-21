@@ -4,7 +4,7 @@
 \alias{top_acc_features}
 \title{Returns top K more important features.}
 \usage{
-top_acc_features(result, top = 10)
+top_acc_features(result, top = 10, order_metric = "IncNodePurity")
 }
 \arguments{
 \item{result}{a fearures importance result}

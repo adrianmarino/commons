@@ -14,6 +14,8 @@ fbeta_score(
 )
 }
 \arguments{
+\item{reality}{real values}
+
 \item{model}{a model name.}
 
 \item{positive}{a positive value example.}
@@ -21,6 +23,8 @@ fbeta_score(
 \item{beta}{a beta value.}
 
 \item{show}{print score in console.}
+
+\item{predictions}{model predictions}
 }
 \value{
 f beta score value.

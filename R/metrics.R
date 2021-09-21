@@ -1,6 +1,6 @@
 #' Get F Beta Score
-#' @param predictions
-#' @param reality
+#' @param predictions model predictions
+#' @param reality real values
 #' @param model a model name.
 #' @param positive a positive value example.
 #' @param beta a beta value.
@@ -24,8 +24,8 @@ fbeta_score <- function(prediction, reality, model="", positive=1, beta=1, show=
 }
 
 #' Get ROC
-#' @param predictions
-#' @param reality
+#' @param predictions model predictions
+#' @param reality real values
 #' @return ROC
 #' @export
 #' @importFrom ROCit rocit
@@ -35,8 +35,8 @@ roc <- function(predictions, reality) {
 
 
 #' Get ROC AUC
-#' @param predictions
-#' @param reality
+#' @param predictions model predictions
+#' @param reality real values
 #' @return AUC
 #' @export
 #' @importFrom pROC roc
@@ -46,45 +46,45 @@ auc <- function(predictions, reality) {
 }
 
 #' Plot ROC
-#' @param predictions
-#' @param reality
+#' @param predictions model predictions
+#' @param reality real values
 #' @export
 plot_roc <- function(predictions, reality) {
   plot(roc(predictions, reality))
 }
 
 #' Get true negatives count.
-#' @param predictions
-#' @param reality
+#' @param predictions model predictions
+#' @param reality real values
 #' @return true negatives count.
 #' @export
 tn <- function(predictions, reality) table(predictions, reality)[1, 1]
 
 #' Get false negatives count.
-#' @param predictions
-#' @param reality
+#' @param predictions model predictions
+#' @param reality real values
 #' @return false negatives count.
 #' @export
 fn <- function(predictions, reality) table(predictions, reality)[1, 2]
 
 #' Get true positives count.
-#' @param predictions
-#' @param reality
+#' @param predictions model predictions
+#' @param reality real values
 #' @return true positives count.
 #' @export
 tp <- function(predictions, reality) table(predictions, reality)[2, 2]
 
 #' Get false positives count.
-#' @param predictions
-#' @param reality
+#' @param predictions model predictions
+#' @param reality real values
 #' @return false positives count.
 #' @export
 fp <- function(predictions, reality) table(predictions, reality)[2, 1]
 
 
 #' Plot confusion matrix
-#' @param predictions
-#' @param reality
+#' @param predictions model predictions
+#' @param reality real values
 #' @export
 #' @importFrom cvms confusion_matrix plot_confusion_matrix
 plot_cm <- function(predictions, reality) {
@@ -93,8 +93,8 @@ plot_cm <- function(predictions, reality) {
 }
 
 #' Get confusion matrix
-#' @param predictions
-#' @param reality
+#' @param predictions model predictions
+#' @param reality real values
 #' @return a confusion matrix
 #' @export
 c_m <- function(predictions, reality) {

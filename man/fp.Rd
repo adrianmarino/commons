@@ -6,6 +6,11 @@
 \usage{
 fp(predictions, reality)
 }
+\arguments{
+\item{predictions}{model predictions}
+
+\item{reality}{real values}
+}
 \value{
 false positives count.
 }

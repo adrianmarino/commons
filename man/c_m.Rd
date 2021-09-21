@@ -6,6 +6,11 @@
 \usage{
 c_m(predictions, reality)
 }
+\arguments{
+\item{predictions}{model predictions}
+
+\item{reality}{real values}
+}
 \value{
 a confusion matrix
 }

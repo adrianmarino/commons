@@ -6,6 +6,11 @@
 \usage{
 plot_cm(predictions, reality)
 }
+\arguments{
+\item{predictions}{model predictions}
+
+\item{reality}{real values}
+}
 \description{
 Plot confusion matrix
 }
