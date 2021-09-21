@@ -41,3 +41,18 @@ index_as_column <- function(df) {
   rownames(df) <- 1:nrow(df)
   df
 }
+
+#' Get numneric column names.
+#' @param df a data frame.
+#' @return a list of columns.
+#' @export
+#' @importFrom dplyr select_if
+num_vars <- function(df) df %>% select_if(is.numeric) %>% colnames()
+
+#' Get categorical column names.
+#' @param df a data frame.
+#' @return a list of columns.
+#' @export
+#' @importFrom dplyr select_if
+cat_vars <- function(df) df %>% select(-num_vars(df)) %>% colnames()
+
