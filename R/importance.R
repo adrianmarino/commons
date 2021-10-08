@@ -32,8 +32,9 @@ plot_features_importance <- function(result, title ='Features importance') {
 #' @importFrom randomForest varImpPlot importance
 top_acc_features <- function(result, top=10, order_metric='IncNodePurity') {
   index_as_column(as.data.frame(importance(result))) %>% 
-    arrange(desc(!!sym(order_metric))) %>%
+    select(index_col, !!sym(order_metric)) %>% 
+    arrange(desc(!!sym(order_metric))) %>% 
     top_n(top) %>%
-    select(index_col) %>%
+    select(index_col) %>% 
     pull()
 }
