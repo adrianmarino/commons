@@ -13,10 +13,12 @@ Imports:
   utils,
   caret,
   dplyr,
-  ggbiplot,
+  BiocManager,
   mdqc,
   randomForest,
   MLmetrics,
   ROCit,
   pROC,
   cvms
+Remotes:
+  vqv/ggbiplot
